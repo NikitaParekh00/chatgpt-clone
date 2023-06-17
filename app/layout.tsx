@@ -1,5 +1,6 @@
 import "tailwindcss/tailwind.css";
 import "@/styles/globals.css";
+import { Sidebar } from "@/components/Sidebar";
 
 export const metadata = {
   title: "ChatGPT",
@@ -15,7 +16,9 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <div className="flex">
-          {" "}
+          <div className="bg-[#202123] max-w-xs h-screen overfow-y-auto md:min-w-[15rem]">
+            <Sidebar />
+          </div>
           <div className="bg-[#343541] flex-1">{children}</div>
         </div>
       </body>
